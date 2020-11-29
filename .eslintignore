@@ -1,0 +1,9 @@
+*.scss
+*.css
+*.html
+*.png
+*.jpg
+*.gif
+*.md
+dist
+public

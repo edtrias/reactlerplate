@@ -1,0 +1,61 @@
+@import '~scss';
+@import '~scss/variables';
+
+.rp-container {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rp-container__square {
+        width: 300px;
+        height: 300px;
+        border: 1px solid $borderDark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.7s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(90deg);
+
+            &:after {
+                transform: scale(0.95);
+                border: 1px solid $borderLight;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 200px;
+            border: 1px solid $borderDark;
+            transition: all 0.7s ease-in-out;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 200px;
+            border: 1px solid transparent;
+            transition: all 0.7s ease-in-out;
+        }
+    }
+
+    .rp-container__text {
+        position: absolute;
+        font-family: 'Arial';
+        color:  $borderDark;
+        font-weight: 800;
+        letter-spacing: 2px;
+        user-select: none;
+        pointer-events: none;
+    }
+}
